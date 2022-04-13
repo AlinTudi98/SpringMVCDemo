@@ -1,5 +1,8 @@
 package com.alint.springlearning.springmvcdemo.models;
 
+import com.alint.springlearning.springmvcdemo.validation.ContactNumberConstraint;
+import com.alint.springlearning.springmvcdemo.validation.CourseCode;
+
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -22,7 +25,17 @@ public class Customer {
 	
 	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="Only 5 chars/digits")
 	private String postalCode;
-	
+
+	@CourseCode(value = "TOPS", message = "must start with TOPS")
+	private String courseCode;
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
 
 	public String getPostalCode() {
 		return postalCode;

@@ -1,5 +1,6 @@
 package com.alint.springlearning.springmvcdemo.models;
 
+
 import java.util.LinkedHashMap;
 
 public class Student {

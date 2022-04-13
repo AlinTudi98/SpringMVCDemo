@@ -28,9 +28,9 @@
     </bean>
     <util:properties id="countryOptions" location="classpath:countries.properties"/>
     <bean id="messageSource"
-          class="org.springframework.context.support.ResourceBundleMessageSource">
-
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basenames" value="classpath:messages"/>
     </bean>
+
 
 </beans>
